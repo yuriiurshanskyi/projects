@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\file_res.png" />
+    <None Remove="Resources\folder_res.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\file_res.png" />
+    <Resource Include="Resources\folder_res.png" />
+  </ItemGroup>
+
+</Project>

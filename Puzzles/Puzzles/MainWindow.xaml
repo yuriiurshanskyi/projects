@@ -1,0 +1,38 @@
+﻿<Window x:Class="Puzzles.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Puzzles"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu x:Name="menu"  VerticalAlignment="Top" Grid.Row="0">
+            <MenuItem Header="Розбити зображення" Click="CutImage_Click"/>
+            <MenuItem Header="Зібрати пазл" >
+                <MenuItem Header="Відкрити фрагменти" Click ="OpenCatalog_Click"/>
+                <MenuItem Header="Запустити алгоритм" Click = "Alghoritm_Click"/>
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ScrollViewer AllowDrop="True" Drop ="sideBar_Drop" >
+                <StackPanel x:Name="sideBar" Width="150" Grid.Column="0" />
+            </ScrollViewer>
+
+            <GridSplitter Grid.Column="1" ShowsPreview="False" Width="3" VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+
+            <Grid x:Name="imageNet" Background="Transparent" 
+                  Grid.Column="2" ShowGridLines="True" AllowDrop="True" Drop ="imageNet_Drop"
+                  />
+        </Grid>
+    </Grid>
+</Window>

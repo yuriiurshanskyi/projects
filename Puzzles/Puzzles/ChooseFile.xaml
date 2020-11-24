@@ -1,0 +1,19 @@
+﻿<Window x:Class="Puzzles.ChooseFile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Puzzles"
+        mc:Ignorable="d"
+        Title="ChooseFile" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TreeView x:Name="treeView" Grid.Column="0" />
+        <GridSplitter Grid.Column="1" ShowsPreview="False" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch" Visibility="Hidden"/>
+        <Button Grid.Column="2" Width="50" Content="OK" Margin="10" VerticalAlignment="Bottom" Click="OkButon_Click"/>
+    </Grid>
+</Window>
